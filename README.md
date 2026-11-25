@@ -54,7 +54,6 @@ Create a `.env` file in the project root directory and add your required environ
 GEMINI_API_KEY=your_gemini_api_key_here
 BACKEND_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
 ```
-*(Adjust variable names if your `agent.py` or `tools.py` uses different environment variable names).*
 
 ## Running the Project
 
@@ -68,7 +67,9 @@ cd ..
 
 ### 2. Start the FastAPI backend server (Terminal 1)
 ```bash
-uvicorn backend.main:app --reload --port 8000
+cd backend
+uvicorn main:app --reload
+
 ```
 Interactive API documentation will be available at `http://127.0.0.1:8000/docs`.
 
